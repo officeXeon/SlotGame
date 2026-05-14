@@ -32,16 +32,18 @@
             PlayBtn = new Button();
             StatBtn = new Button();
             ExitBtn = new Button();
-            button4 = new Button();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = SystemColors.Control;
             label1.Font = new Font("Segoe Print", 24F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            label1.Location = new Point(190, 45);
+            label1.Location = new Point(160, 33);
             label1.Name = "label1";
-            label1.Size = new Size(261, 57);
+            label1.Size = new Size(324, 71);
             label1.TabIndex = 0;
             label1.Text = "Главное меню";
             // 
@@ -49,9 +51,10 @@
             // 
             PlayBtn.FlatStyle = FlatStyle.Flat;
             PlayBtn.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold);
-            PlayBtn.Location = new Point(232, 151);
+            PlayBtn.Location = new Point(224, 180);
+            PlayBtn.Margin = new Padding(3, 4, 3, 4);
             PlayBtn.Name = "PlayBtn";
-            PlayBtn.Size = new Size(187, 37);
+            PlayBtn.Size = new Size(214, 49);
             PlayBtn.TabIndex = 1;
             PlayBtn.Text = "Играть";
             PlayBtn.UseVisualStyleBackColor = true;
@@ -61,9 +64,10 @@
             // 
             StatBtn.FlatStyle = FlatStyle.Flat;
             StatBtn.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold);
-            StatBtn.Location = new Point(232, 210);
+            StatBtn.Location = new Point(224, 260);
+            StatBtn.Margin = new Padding(3, 4, 3, 4);
             StatBtn.Name = "StatBtn";
-            StatBtn.Size = new Size(187, 37);
+            StatBtn.Size = new Size(214, 49);
             StatBtn.TabIndex = 2;
             StatBtn.Text = "Статистика";
             StatBtn.UseVisualStyleBackColor = true;
@@ -72,37 +76,39 @@
             // 
             ExitBtn.FlatStyle = FlatStyle.Flat;
             ExitBtn.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            ExitBtn.Location = new Point(232, 268);
+            ExitBtn.Location = new Point(224, 335);
+            ExitBtn.Margin = new Padding(3, 4, 3, 4);
             ExitBtn.Name = "ExitBtn";
-            ExitBtn.Size = new Size(187, 38);
+            ExitBtn.Size = new Size(214, 51);
             ExitBtn.TabIndex = 3;
             ExitBtn.Text = "Выход";
             ExitBtn.UseVisualStyleBackColor = true;
             ExitBtn.Click += ExitBtn_Click;
             // 
-            // button4
+            // pictureBox1
             // 
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button4.Location = new Point(12, 339);
-            button4.Name = "button4";
-            button4.Size = new Size(50, 43);
-            button4.TabIndex = 4;
-            button4.Text = "⚙";
-            button4.UseVisualStyleBackColor = true;
+            pictureBox1.Image = Properties.Resources.images;
+            pictureBox1.Location = new Point(1, -1);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(656, 530);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
             // 
             // MainMenuForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(643, 394);
-            Controls.Add(button4);
+            ClientSize = new Size(656, 483);
             Controls.Add(ExitBtn);
             Controls.Add(StatBtn);
             Controls.Add(PlayBtn);
             Controls.Add(label1);
+            Controls.Add(pictureBox1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "MainMenuForm";
             Text = "Слоты";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -113,7 +119,7 @@
         private Button PlayBtn;
         private Button StatBtn;
         private Button ExitBtn;
-        private Button button4;
+        private PictureBox pictureBox1;
     }
 
         
